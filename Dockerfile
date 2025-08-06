@@ -5,5 +5,5 @@ RUN npm install
 RUN npm run build -- --configuration production
 
 FROM nginx:alpine
-COPY --from=builder /app/dist/coreui-free-angular-admin-template /usr/share/nginx/html
+COPY --from=builder /app/dist/coreui-free-angular-admin-template/brower /usr/share/nginx/html
 EXPOSE 80
